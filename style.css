@@ -1,0 +1,60 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color:teal;
+    font-family: Arial, sans-serif;
+}
+
+.calculator {
+    background: #04a1eb;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.925);
+    width: 350px;
+    padding: 20px;
+}
+
+#display {
+    width: 100%;
+    height: 50px;
+    font-size: 24px;
+    text-align: right;
+    margin-bottom: 10px;
+    border: 1px solid #ffffffd7;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+
+.btn {
+    height: 60px;
+    font-size: 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.btn:hover {
+    opacity: 0.8;
+}
+
+.btn:nth-child(1) { background: #ff6b6b; }
+.btn:nth-child(2) { background: #ffb74d; }
+.btn:nth-child(3) { background: #4caf50; }
+.btn:nth-child(4) { background: #29b6f6; }
+.btn:nth-child(n+5):nth-child(-n+8) { background: #ffe082; }
+.btn:nth-child(n+9):nth-child(-n+12) { background: #81d4fa; }
+.btn:nth-child(n+13):nth-child(-n+16) { background: #80cbc4; }
+.zero {
+    grid-column: span 2;
+}
+.percent {
+    background: #f06292;
+}
